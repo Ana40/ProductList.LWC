@@ -1,0 +1,56 @@
+/* productList.css */
+
+/* Estilo para o Lightning Card */
+lightning-card {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a tabela de produtos */
+lightning-datatable {
+    margin-top: 1rem;
+}
+
+/* Estilo para os botões de ação */
+.lightning-button {
+    margin: 0.5rem 0;
+}
+
+/* Estilo para o formulário de edição de produto */
+.lightning-input, .lightning-textarea {
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+/* Estilo para o botão "Novo Produto" */
+.lightning-button.brand {
+    background-color: #0070d2; /* Azul da Salesforce */
+    border-color: #0070d2;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Estilo para os botões "Salvar" e outros */
+.lightning-button.neutral {
+    background-color: #f3f6f9;
+    border-color: #d0d6dd;
+    color: #0070d2;
+}
+
+.lightning-button.neutral:hover {
+    background-color: #e0e4e8;
+}
+
+/* Estilo para campos de entrada e área de texto */
+.lightning-input, .lightning-textarea {
+    border: 1px solid #d0d6dd;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+
+.lightning-input:focus, .lightning-textarea:focus {
+    border-color: #0070d2;
+    box-shadow: 0 0 0 2px rgba(0, 112, 210, 0.2);
+}
