@@ -1,23 +1,23 @@
 public with sharing class ProductController {
     
     @AuraEnabled(cacheable=true)
-    public static List<Product__c> getProducts() {
-        return [SELECT Id, Name, Code__c, Description__c, Price__c FROM Product__c];
+    public static List<Product2> getProducts() {
+        return [SELECT Id, Name, ProductCode, Description__c, Price__c FROM Product2];
     }
     
     @AuraEnabled
-    public static Product__c getProductById(Id productId) {
-        return [SELECT Id, Name, Code__c, Description__c, Price__c FROM Product__c WHERE Id = :productId LIMIT 1];
+    public static Product2 getProductById(Id productId) {
+        return [SELECT Id, Name, ProductCode, Description__c, Price__c FROM Product2 WHERE Id = :productId LIMIT 1];
     }
     
     @AuraEnabled
-    public static void saveProduct(Product__c product) {
+    public static void saveProduct(Product2 product) {
         upsert product;
     }
     
     @AuraEnabled
     public static void deleteProduct(Id productId) {
-        Product__c product = [SELECT Id FROM Product__c WHERE Id = :productId LIMIT 1];
+        Product2 product = [SELECT Id FROM Product2 WHERE Id = :productId LIMIT 1];
         delete product;
     }
 }
