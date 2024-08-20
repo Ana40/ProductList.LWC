@@ -5,7 +5,7 @@ import deleteProduct from '@salesforce/apex/ProductController.deleteProduct';
 
 const COLUMNS = [
     { label: 'Nome', fieldName: 'Name' },
-    { label: 'Código', fieldName: 'Code__c' },
+    { label: 'Código', fieldName: 'ProductCode' },
     { label: 'Descrição', fieldName: 'Description__c' },
     { label: 'Preço', fieldName: 'Price__c' },
     {
@@ -81,7 +81,7 @@ export default class ProductList extends LightningElement {
     createNewProduct() {
         this.currentProduct = {
             Name: '',
-            Code__c: '',
+            ProductCode: '',
             Description__c: '',
             Price__c: 0
         };
