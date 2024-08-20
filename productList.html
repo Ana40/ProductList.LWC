@@ -1,3 +1,4 @@
+
 <template>
     <lightning-card title="Lista de Produtos">
         <template if:true={products}>
@@ -10,7 +11,7 @@
         </template>
         <template if:true={isEditing}>
             <lightning-input label="Nome" value={currentProduct.Name} onchange={handleChange} data-id="Name"></lightning-input>
-            <lightning-input label="Código" value={currentProduct.Code__c} onchange={handleChange} data-id="Code__c"></lightning-input>
+            <lightning-input label="Código" value={currentProduct.ProductCode} onchange={handleChange} data-id="ProductCode"></lightning-input>
             <lightning-textarea label="Descrição" value={currentProduct.Description__c} onchange={handleChange} data-id="Description__c"></lightning-textarea>
             <lightning-input label="Preço" value={currentProduct.Price__c} onchange={handleChange} data-id="Price__c"></lightning-input>
             <lightning-button variant="neutral" label="Salvar" onclick={saveProduct}></lightning-button>
