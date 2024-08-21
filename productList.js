@@ -1,4 +1,4 @@
-import { LightningElement, track, wire } from 'lwc';
+import { LightningElement, api, track, wire } from 'lwc';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 import saveProduct from '@salesforce/apex/ProductController.saveProduct';
 import deleteProduct from '@salesforce/apex/ProductController.deleteProduct';
